@@ -5,7 +5,7 @@ export const DEFAULT_PLANS = [
     tagline: "Perfect for a healthy start!",
     description:
       "Three fresh, home-style, calorie-checked meals every day for one week. A simple way to start eating better, delivered to your doorstep.",
-    pricePkr: 7500,
+    pricePkr: 8500,
     originalPricePkr: null,
     discountPercent: 0,
     durationDays: 7,
@@ -38,7 +38,7 @@ export const DEFAULT_PLANS = [
     tagline: "Balanced nutrition, better results!",
     description:
       "Three main meals plus healthy snacks every day for two weeks. Balanced nutrition that keeps your energy steady and cravings under control.",
-    pricePkr: 14000,
+    pricePkr: 15000,
     originalPricePkr: null,
     discountPercent: 0,
     durationDays: 14,
@@ -72,7 +72,7 @@ export const DEFAULT_PLANS = [
     tagline: "For real, visible results!",
     description:
       "Three main meals, healthy snacks and refreshing healthy drinks every day for three weeks. Our most complete plan for real, visible results.",
-    pricePkr: 20000,
+    pricePkr: 21000,
     originalPricePkr: null,
     discountPercent: 0,
     durationDays: 21,
