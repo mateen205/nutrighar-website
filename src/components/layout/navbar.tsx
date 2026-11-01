@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
@@ -45,18 +44,15 @@ export function Navbar({
     >
       <style>{`
         .ng-nav { transition: background-color .25s ease, border-color .25s ease; }
-        .ng-logo-light { display: none; }
         @media (max-width: 1023px) {
-          .ng-nav[data-home="true"] { margin-bottom: -3.5rem; }
-          .ng-nav[data-home="true"] .ng-nav-row { height: 3.5rem; }
+          .ng-nav[data-home="true"] { margin-bottom: -4rem; }
+          .ng-nav[data-home="true"] .ng-nav-row { height: 4rem; }
           .ng-nav[data-over="true"] {
             background-color: transparent;
             border-bottom-color: transparent;
             -webkit-backdrop-filter: none;
             backdrop-filter: none;
           }
-          .ng-nav[data-over="true"] .ng-logo-light { display: block; }
-          .ng-nav[data-over="true"] .ng-logo-dark { display: none; }
           .ng-nav[data-over="true"] .ng-burger {
             color: #ffffff;
             border-color: rgba(255, 255, 255, 0.65);
@@ -64,13 +60,17 @@ export function Navbar({
           }
         }
       `}</style>
-      <div className="ng-nav-row container-ng flex h-14 items-center justify-between gap-3 sm:h-16 lg:h-[4.25rem]">
-        <div className="ng-logo-dark">
-          <Logo />
-        </div>
-        <div className="ng-logo-light">
-          <Logo variant="light" withTagline={false} />
-        </div>
+      <div className="ng-nav-row container-ng flex h-16 items-center justify-between gap-3 lg:h-[4.5rem]">
+        <Link href="/" aria-label="NutriGhar home" style={{ display: "block", flexShrink: 0 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-full.jpg"
+            alt="NutriGhar: Good Food, Happy You"
+            width={569}
+            height={408}
+            style={{ display: "block", height: "3rem", width: "auto", borderRadius: "0.5rem" }}
+          />
+        </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {LINKS.map((link) => {
